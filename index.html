@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Instruction Page -->
+    <div class="instruction-page">
+        <h1>Color Guessing Game</h1>
+        <p>Instructions:</p>
+        <ul>
+            <li>A color will be displayed at the top of the screen.</li>
+            <li>You have to guess which of the 6 colors at the bottom matches the displayed color.</li>
+            <li>Click on the color you think is correct.</li>
+            <li>If you are correct, you earn a point.</li>
+            <li>The game continues until time runs out.</li>
+        </ul>
+        <button id="play-game-button">Play Game</button>
+    </div>
+
+    <!-- Game Page -->
+    <div class="game-page">
+        <section class="scoreboard-section">
+            <div class="scoreboard">
+                <span id="score">Score: 0</span>
+                <span id="high-score">High Score: 0</span>
+                <span id="time-left" class="time-left">Time Left: 1:00</span>
+            </div>
+        </section>
+
+        <section class="game-section">
+            <h1>Guess the Color!</h1>
+            <div class="color-box"></div>
+            <div class="color-options">
+                <div class="color-option"></div>
+                <div class="color-option"></div>
+                <div class="color-option"></div>
+                <div class="color-option"></div>
+                <div class="color-option"></div>
+                <div class="color-option"></div> <!-- Now 6 color options -->
+            </div>
+            <div class="game-status"></div>
+            <button id="new-game-button">New Game</button>
+        </section>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="game-over-modal">
+        <h2>Game Over!</h2>
+        <p>Your final score is: <span id="final-score">0</span></p>
+        <button id="continue-button">Continue</button>
+        <button id="exit-button">Exit</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

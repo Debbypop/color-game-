@@ -1,0 +1,249 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #252532;  /* Dark Theme */
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Instruction Page */
+.instruction-page {
+    width: 50%;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255, 250, 250, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.instruction-page:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+p, li {
+    font-size: 18px;
+}
+
+.instruction-page ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.instruction-page li::before {
+    content: "★";
+    color: #ffcc00;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Play Button */
+#play-game-button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #4caf50, #00c853);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#play-game-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00c853;
+}
+
+/* Game Page */
+.game-page {
+    display: none;
+    padding: 20px;
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 20px auto;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 10px;
+    background: #d6e0ef; /* Darker shade for contrast */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#score {
+    color: #4caf50;
+}
+
+#high-score {
+    color: #ff9800;
+}
+
+#time-left {
+    color: #e91e63;
+}
+
+/* Game Section */
+.game-section {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* Color Box */
+.color-box {
+    width: 220px;
+    height: 220px;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 4px solid #ffcc00;
+    box-shadow: 0 0 15px #ffcc00;
+    transition: 0.3s;
+}
+
+.color-box:hover {
+    box-shadow: 0 0 25px #ffcc00;
+}
+
+/* Color Options */
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.color-option {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid white;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px white;
+}
+
+/* Game Status */
+.game-status {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+/* New Game Button */
+#new-game-button {
+    padding: 14px 25px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #2196F3, #3F51B5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 30px;
+}
+
+#new-game-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #2196F3;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.modal h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+#final-score {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* Buttons */
+button {
+    padding: 12px 22px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .instruction-page {
+        width: 85%;
+    }
+
+    .scoreboard {
+        width: 85%;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .color-options {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .color-option {
+        width: 50px;
+        height: 50px;
+    }
+}
