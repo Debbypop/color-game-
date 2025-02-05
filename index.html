@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Instruction Page -->
+    <div class="instruction-page" data-testid="instructionPage">
+        <h1 data-testid="gameTitle">Color Guessing Game</h1>
+        <p data-testid="instructions">Instructions:</p>
+        <ul data-testid="instructionList">
+            <li data-testid="instructionItem">A color will be displayed at the top of the screen.</li>
+            <li data-testid="instructionItem">You have to guess which of the 6 colors at the bottom matches the displayed color.</li>
+            <li data-testid="instructionItem">Click on the color you think is correct.</li>
+            <li data-testid="instructionItem">If you are correct, you earn a point.</li>
+            <li data-testid="instructionItem">The game continues until time runs out.</li>
+        </ul>
+        <button id="play-game-button" data-testid="playGameButton">Play Game</button>
+    </div>
+
+    <!-- Game Page -->
+    <div class="game-page" data-testid="gamePage">
+        <section class="scoreboard-section">
+            <div class="scoreboard" data-testid="scoreBoard">
+                <span id="score" data-testid="score">Score: 0</span>
+                <span id="high-score" data-testid="highScore">High Score: 0</span>
+                <span id="time-left" class="timeLeft" data-testid="timeLeft">Time Left: 1:00</span>
+            </div>
+        </section>
+
+        <section class="game-section">
+            <h1 data-testid="guessColorHeading">Guess the Color!</h1>
+            <div class="color-box" data-testid="colorBox"></div>
+            <div class="color-options" data-testid="colorOtions">
+                <div class="color-option" data-testid="colorOption1"></div>
+                <div class="color-option" data-testid="colorOption2"></div>
+                <div class="color-option" data-testid="colorOption3"></div>
+                <div class="color-option" data-testid="colorOption4"></div>
+                <div class="color-option" data-testid="colorOption5"></div>
+                <div class="color-option" data-testid="colorOption6"></div>
+            </div>
+            <div class="game-status" data-testid="gameStatus"></div>
+            <button id="new-game-button" data-testid="newGameButton">New Game</button>
+        </section>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="game-over-modal" data-testid="gameOverModal">
+        <h2 data-testid="gameOverTitle">Game Over!</h2>
+        <p data-testid="finalScoreText">Your final score is: <span id="finalScore" data-testid="finalScore">0</span></p>
+        <button id="continue-button" data-testid="continueButton">Continue</button>
+        <button id="exit-button" data-testid="exitButton">Exit</button>
+    </div>
+<div></div>
+    <script src="script.js"></script>
+</body>
+</html>
